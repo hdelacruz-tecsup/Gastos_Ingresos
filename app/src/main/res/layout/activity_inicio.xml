@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InicioActivity">
+    
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contabilidad de Ingresos / Egresos"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/ahorro_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/title_text"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/bg_lupa1"
+            android:layout_marginEnd="16dp"
+            />
+        <TextView
+            android:id="@+id/sueldo_ahorro_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldo actual ahorrado" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="S/1200"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/credito_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/ahorro_1"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/bg_lupa1"
+            android:layout_marginEnd="16dp"
+            />
+        <TextView
+            android:id="@+id/sueldo_credito_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldo actual ahorrado" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="S/1200"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/efectivo_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/credito_1"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/bg_lupa1"
+            android:layout_marginEnd="16dp"
+            />
+        <TextView
+            android:id="@+id/sueldo_efectivo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldo actual ahorrado" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="S/1200"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/efectivo_1"
+        android:layout_marginTop="20sp">
+
+        <TextView
+            android:id="@+id/title_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contabilidad de Ingresos / Egresos"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <ProgressBar
+            android:id="@+id/progressbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp"
+            android:progress="50"
+            style="@android:style/Widget.ProgressBar.Horizontal"/>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+
+</RelativeLayout>

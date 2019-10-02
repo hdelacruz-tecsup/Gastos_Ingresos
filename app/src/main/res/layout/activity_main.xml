@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Ingreso_egreso_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registar Ingresos/Egresos"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:textSize="24sp"
+         />
+    <EditText
+        android:id="@+id/monto_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Ingrese monto"
+        android:layout_below="@+id/Ingreso_egreso_text"/>
+
+    <LinearLayout
+        android:id="@+id/Tipos_gasto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/monto_text">
+
+        <RadioGroup
+            android:id="@+id/tipo_ingreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@+id/t_cuenta_text"
+            android:layout_marginTop="30dp">
+
+
+            <RadioButton
+                android:id="@+id/ingreso_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Ingreso" />
+
+            <RadioButton
+                android:id="@+id/egreso_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_marginLeft="40dp"
+                android:text="Egreso" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/t_cuenta_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tipod de Cuenta"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_below="@+id/Tipos_gasto"
+        android:layout_marginTop="30dp"/>
+
+    <RadioGroup
+
+        android:id="@+id/tipo_cuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_below="@+id/t_cuenta_text"
+        android:layout_marginTop="30dp">
+
+
+        <RadioButton
+            android:id="@+id/tcredito_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Tarjeta de Credito"
+            android:layout_marginTop="16dp"/>
+
+        <RadioButton
+            android:id="@+id/tahorros_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Ahorros"
+            android:layout_marginTop="16dp"/>
+
+        <RadioButton
+            android:id="@+id/efectivo_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Efectivo"
+            android:layout_marginTop="16dp"/>
+    </RadioGroup>
+
+
+
+
+    <Button
+        android:id="@+id/registrar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Registar"
+        android:layout_below="@+id/tipo_cuenta"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
